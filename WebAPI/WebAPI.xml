@@ -186,5 +186,10 @@
             <param name="id"></param>
             <returns></returns>
         </member>
+        <member name="T:WebAPI.Jobs.MailSendJob">
+            <summary>
+            Sending mails using Hangfire.
+            </summary>
+        </member>
     </members>
 </doc>
