@@ -1,0 +1,190 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>WebAPI</name>
+    </assembly>
+    <members>
+        <member name="M:WebAPI.Controllers.AuthController.Register(Entities.Models.RegisterModel)">
+            <summary>
+            Register with your email and password.
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WebAPI.Controllers.AuthController.Login(Entities.Models.LoginModel)">
+            <summary>
+            Login with your email and password
+            </summary>
+            <param name="input"></param>
+            <returns>Jwt token for authorization</returns>
+        </member>
+        <member name="M:WebAPI.Controllers.AuthController.ResetPassword(Entities.Models.PWResetModel)">
+            <summary>
+            Reset your password.
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WebAPI.Controllers.CategoryController.GetAll">
+            <summary>
+            Get all categories.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WebAPI.Controllers.CategoryController.Add(Entities.Models.CategoryViewModel)">
+            <summary>
+            Insert a category.
+            </summary>
+            <param name="entity"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WebAPI.Controllers.CategoryController.Update(Entities.DataModel.Category)">
+            <summary>
+            Update a category.
+            </summary>
+            <param name="entity"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WebAPI.Controllers.CategoryController.GetById(System.Int32)">
+            <summary>
+            Getting a specific category from database using its id.
+            </summary>
+            <param name="id"></param>
+            <returns>Category.</returns>
+        </member>
+        <member name="M:WebAPI.Controllers.CategoryController.GetProductsByCategory(System.Int32)">
+            <summary>
+            Getting products of a specific category using category's id.
+            </summary>
+            <param name="id"></param>
+            <returns>Products</returns>
+        </member>
+        <member name="M:WebAPI.Controllers.MyAccountController.GetGivenOffers(System.Int32)">
+            <summary>
+            Get your given offers.
+            </summary>
+            <param name="UserId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WebAPI.Controllers.MyAccountController.GetTakenOffers(System.Int32)">
+            <summary>
+            Get given offers to your products.
+            </summary>
+            <param name="UserId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WebAPI.Controllers.MyAccountController.ConfirmOffer(System.Int32,System.Int32)">
+            <summary>
+            Confirm an offer that given to one of your products.
+            </summary>
+            <param name="UserId"></param>
+            <param name="OfferId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WebAPI.Controllers.MyAccountController.RejectOffer(System.Int32,System.Int32)">
+            <summary>
+            Reject an offer that given to one of your products.
+            </summary>
+            <param name="UserId"></param>
+            <param name="OfferId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WebAPI.Controllers.MyAccountController.WithdrawOffer(System.Int32,System.Int32)">
+            <summary>
+            Withdraw an offer that given by you.
+            </summary>
+            <param name="UserId"></param>
+            <param name="OfferId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WebAPI.Controllers.OfferController.GiveOffer(Entities.Models.OfferModel)">
+            <summary>
+            Give an offer.
+            </summary>
+            <param name="entity"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WebAPI.Controllers.OfferController.GivePercentageOffer(Entities.Models.OfferPercentageModel)">
+            <summary>
+            Give an offer using the product's price.
+            </summary>
+            <param name="entity"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WebAPI.Controllers.OfferController.BuyProduct(System.Int32)">
+            <summary>
+            Buy the product directly without offering.
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WebAPI.Controllers.ParameterController.GetColors">
+            <summary>
+            Get colors.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WebAPI.Controllers.ParameterController.AddColor(Entities.Models.ParameterAddModel)">
+            <summary>
+            Add a color.
+            </summary>
+            <param name="color"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WebAPI.Controllers.ParameterController.GetBrands">
+            <summary>
+            Get brands.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WebAPI.Controllers.ParameterController.AddBrand(Entities.Models.ParameterAddModel)">
+            <summary>
+            Add a brand.
+            </summary>
+            <param name="brand"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WebAPI.Controllers.ParameterController.GetStatus">
+            <summary>
+            Get status.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WebAPI.Controllers.ParameterController.AddStatus(Entities.Models.ParameterAddModel)">
+            <summary>
+            Add a status.
+            </summary>
+            <param name="status"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WebAPI.Controllers.ProductController.GetAll">
+            <summary>
+            Get all products from database.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WebAPI.Controllers.ProductController.Add(Entities.Models.ProductModel)">
+            <summary>
+            Insert a product to database.
+            </summary>
+            <param name="entity"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WebAPI.Controllers.ProductController.Update(System.Int32,Entities.Models.ProductUpdateModel)">
+            <summary>
+            Update a product. Product must be yours.
+            </summary>
+            <param name="UserId"></param>
+            <param name="entity"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WebAPI.Controllers.ProductController.Delete(System.Int32,System.Int32)">
+            <summary>
+            Delete a product. Product must be yours.
+            </summary>
+            <param name="UserId"></param>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
